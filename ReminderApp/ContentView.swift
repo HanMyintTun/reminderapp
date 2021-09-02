@@ -24,8 +24,8 @@ class NotificationManager{
     
     func scheduleNotification(){
         let content = UNMutableNotificationContent()
-        content.title = "This is first Noti"
-        content.subtitle = "This is cool"
+        content.title = "Reading Time"
+        content.subtitle = "Reading for week xx is ready for you. Please go the app to read."
         content.sound = .default
         content.badge = 1
         
@@ -34,9 +34,9 @@ class NotificationManager{
         
         //by calendar
         var dateComponents = DateComponents()
-        dateComponents.hour = 10
-        dateComponents.minute = 0
-        dateComponents.weekday = 5
+        dateComponents.hour = 9
+        dateComponents.minute = 30
+        dateComponents.weekday = 2
         let triggerDate = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         //by location
